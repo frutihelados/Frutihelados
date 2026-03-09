@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Helados</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:white;
+padding:15px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#ff4fa0;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff4fa0;
+}
+
+/* HERO */
+
+.hero{
+background:url("https://images.unsplash.com/photo-1501443762994-82bd5dace89a") center/cover;
+height:400px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+background:rgba(0,0,0,0.4);
+padding:20px;
+border-radius:10px;
+}
+
+/* PRODUCTOS */
+
+.productos{
+padding:50px;
+text-align:center;
+}
+
+.productos h2{
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.producto{
+background:white;
+border-radius:12px;
+padding:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:transform 0.2s;
+}
+
+.producto:hover{
+transform:translateY(-5px);
+}
+
+.producto img{
+width:100%;
+border-radius:10px;
+}
+
+.producto h3{
+margin:10px 0;
+}
+
+.boton{
+background:#ff4fa0;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.boton:hover{
+background:#ff2c8a;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">CremHelado Demo</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Productos</a>
+<a href="#">Promociones</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Disfruta el mejor helado 🍦</h1>
+
+</section>
+
+<section class="productos">
+
+<h2>Nuestros Sabores</h2>
+
+<div class="grid">
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb">
+<h3>Chocolate</h3>
+<p>Helado cremoso de chocolate.</p>
+<button class="boton">Ver más</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f">
+<h3>Fresa</h3>
+<p>Helado natural de fresa.</p>
+<button class="boton">Ver más</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1488900128323-21503983a07e">
+<h3>Vainilla</h3>
+<p>Clásico sabor vainilla.</p>
+<button class="boton">Ver más</button>
+</div>
+
+<div class="producto">
+<img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac">
+<h3>Mango</h3>
+<p>Helado tropical de mango.</p>
+<button class="boton">Ver más</button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Tienda de Helados</p>
+<p>Sitio demo para GitHub Pages</p>
+
+</footer>
+
+</body>
+</html>
