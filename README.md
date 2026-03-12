@@ -17,4 +17,5 @@ Here are some ideas to get you started:
 
 #1c438c #014c98 #009bdd #ffdd00 #f72c21
 
+https://paletadecolores.com.mx/
 
