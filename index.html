@@ -8,19 +8,19 @@
 
     <title>FrutiHelados Colombia</title>
 
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Abril+Fatface&display=swap" rel="stylesheet">
 
 <style>
 
 /* Estilo general */
 body{
     margin:0;
-    font-family:'Poppins',sans-serif;
+    font-family:'Poppins', sans-serif;
     background:#f4f4f4;
 }
 
-/* Header */
+/* Header con fuente diferente */
 header{
     background:white;
     padding:15px 40px;
@@ -28,23 +28,26 @@ header{
     align-items:center;
     justify-content:space-between;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+    /* Fuente SOLO para el header */
+    font-family:'Abril Fatface', cursive;
 }
 
 /* Logo */
 .logo{
-    font-size:24px;
-    font-weight:700;
+    font-size:28px;
     color:#1c438c;
 }
 
-/* Links del menú */
+/* Links del menú (opcional: más legibles) */
 nav a{
     margin-left:20px;
     text-decoration:none;
     color:#333;
-    font-weight:500;
+    font-size:18px;
 }
 
+/* Hover */
 nav a:hover{
     color:#ff4fa0;
 }
@@ -77,14 +80,14 @@ nav a:hover{
     margin-bottom:40px;
 }
 
-/* Grid de productos */
+/* Grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:30px;
 }
 
-/* Tarjeta de producto */
+/* Tarjeta */
 .producto{
     background:white;
     border-radius:12px;
@@ -134,7 +137,7 @@ footer{
 
 <body>
 
-<!-- Barra superior -->
+<!-- Header -->
 <header>
 
 <div class="logo">FrutiHelados Colombia</div>
@@ -148,12 +151,10 @@ footer{
 
 </header>
 
-
-<!-- Imagen principal -->
+<!-- Hero -->
 <section class="hero">
 <h1>¡El mejor helado de la ciudad! 🍦</h1>
 </section>
-
 
 <!-- Productos -->
 <section class="productos">
@@ -194,8 +195,7 @@ footer{
 
 </section>
 
-
-<!-- Pie de página -->
+<!-- Footer -->
 <footer>
 
 <p>© 2026 Helado Artesanal con el mejor sabor</p>
