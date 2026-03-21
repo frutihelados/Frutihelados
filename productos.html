@@ -78,15 +78,17 @@ nav a.activo {
     font-family: 'Abril Fatface', cursive;
     margin-bottom: 5px;
 }
-    .titulo-seccion p {
+
+.titulo-seccion p {
     color: #222;
     font-size: 16px;
     margin-top: 0;
-    max-width: 850px;    /* limita el ancho del párrafo */
-    margin-left: auto;   /* centra horizontalmente */
-    margin-right: auto;  /* centra horizontalmente */
-    text-align: justify; /* justifica el texto */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
 }
+
 /* Contenedor principal */
 .contenido {
     max-width: 900px;
@@ -94,22 +96,54 @@ nav a.activo {
     padding: 10px 30px 60px;
 }
 
-/* Título de categoría */
-.categoria-titulo {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 26px;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    margin: 40px 0 20px;
+/* Separador de categoría estilo opción 3 */
+.categoria-separador {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 50px 0 24px;
 }
 
-.categoria-citricos  { background: #e8780a; }
-.categoria-dulces    { background: #c0186e; }
-.categoria-cremosos  { background: #014c98; }
-.categoria-tropicales{ background: #1a9640; }
+.categoria-icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
 
-/* Item de producto en lista */
+.categoria-linea {
+    flex: 1;
+    height: 2px;
+}
+
+.categoria-nombre {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+/* Colores por categoría */
+.citricos  .categoria-icono { background: #e8780a; }
+.citricos  .categoria-linea { background: #e8780a; }
+.citricos  .categoria-nombre { color: #e8780a; }
+
+.dulces    .categoria-icono { background: #c0186e; }
+.dulces    .categoria-linea { background: #c0186e; }
+.dulces    .categoria-nombre { color: #c0186e; }
+
+.cremosos  .categoria-icono { background: #014c98; }
+.cremosos  .categoria-linea { background: #014c98; }
+.cremosos  .categoria-nombre { color: #014c98; }
+
+.tropicales .categoria-icono { background: #1a9640; }
+.tropicales .categoria-linea { background: #1a9640; }
+.tropicales .categoria-nombre { color: #1a9640; }
+
+/* Item de producto en lista con borde izquierdo */
 .producto-item {
     background: white;
     border-radius: 12px;
@@ -125,6 +159,12 @@ nav a.activo {
 .producto-item:hover {
     transform: translateY(-4px);
 }
+
+/* Borde izquierdo de color por categoría */
+.citricos   .producto-item { border-left: 5px solid #e8780a; }
+.dulces     .producto-item { border-left: 5px solid #c0186e; }
+.cremosos   .producto-item { border-left: 5px solid #014c98; }
+.tropicales .producto-item { border-left: 5px solid #1a9640; }
 
 /* Imagen del producto */
 .producto-item img {
@@ -151,7 +191,7 @@ nav a.activo {
     font-size: 14px;
     color: #555;
     line-height: 1.6;
-    text-align: justify; 
+    text-align: justify;
 }
 
 /* Footer */
@@ -187,140 +227,168 @@ footer {
     <h1>Nuestros Productos</h1>
     <p>En un mundo lleno de productos con exceso de azúcares, grasas y aditivos artificiales, nuestros helados son una alternativa que sí provoca.
        <strong>Pensamos en tu bienestar</strong> sin renunciar al placer: <strong>cada helado está elaborado con ingredientes reales, frescos y de alta calidad, para que disfrutes un sabor auténtico en cada bocado.</strong>
-       Porque cuidarte también puede ser delicioso… y aquí lo compruebas en cada sabor</p>
+       Porque cuidarte también puede ser delicioso… y aquí lo compruebas en cada sabor.</p>
 </div>
 
 <div class="contenido">
 
     <!-- ───── CÍTRICOS ───── -->
-    <div class="categoria-titulo categoria-citricos">🍋 Cítricos</div>
-
-    <div class="producto-item">
-        <img src="Contenido/Productos/citrico1.jpg" alt="Producto cítrico 1">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+    <div class="citricos">
+        <div class="categoria-separador">
+            <div class="categoria-icono">🍋</div>
+            <div class="categoria-linea"></div>
+            <div class="categoria-nombre">Cítricos</div>
+            <div class="categoria-linea"></div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/citrico2.jpg" alt="Producto cítrico 2">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/citrico1.jpg" alt="Producto cítrico 1">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/citrico3.jpg" alt="Producto cítrico 3">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/citrico2.jpg" alt="Producto cítrico 2">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
+        </div>
+
+        <div class="producto-item">
+            <img src="Contenido/Productos/citrico3.jpg" alt="Producto cítrico 3">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
     </div>
 
     <!-- ───── DULCES ───── -->
-    <div class="categoria-titulo categoria-dulces">🍬 Dulces</div>
-
-    <div class="producto-item">
-        <img src="Contenido/Productos/dulce1.jpg" alt="Producto dulce 1">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+    <div class="dulces">
+        <div class="categoria-separador">
+            <div class="categoria-icono">🍬</div>
+            <div class="categoria-linea"></div>
+            <div class="categoria-nombre">Dulces</div>
+            <div class="categoria-linea"></div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/dulce2.jpg" alt="Producto dulce 2">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/dulce1.jpg" alt="Producto dulce 1">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/dulce3.jpg" alt="Producto dulce 3">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/dulce2.jpg" alt="Producto dulce 2">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/dulce4.jpg" alt="Producto dulce 4">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/dulce3.jpg" alt="Producto dulce 3">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
+        </div>
+
+        <div class="producto-item">
+            <img src="Contenido/Productos/dulce4.jpg" alt="Producto dulce 4">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
     </div>
 
     <!-- ───── CREMOSOS ───── -->
-    <div class="categoria-titulo categoria-cremosos">🍦 Cremosos</div>
-
-    <div class="producto-item">
-        <img src="Contenido/Productos/cremoso1.jpg" alt="Producto cremoso 1">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+    <div class="cremosos">
+        <div class="categoria-separador">
+            <div class="categoria-icono">🍦</div>
+            <div class="categoria-linea"></div>
+            <div class="categoria-nombre">Cremosos</div>
+            <div class="categoria-linea"></div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/cremoso2.jpg" alt="Producto cremoso 2">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/cremoso1.jpg" alt="Producto cremoso 1">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/cremoso3.jpg" alt="Producto cremoso 3">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/cremoso2.jpg" alt="Producto cremoso 2">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/cremoso4.jpg" alt="Producto cremoso 4">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/cremoso3.jpg" alt="Producto cremoso 3">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
+        </div>
+
+        <div class="producto-item">
+            <img src="Contenido/Productos/cremoso4.jpg" alt="Producto cremoso 4">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
     </div>
 
     <!-- ───── TROPICALES ───── -->
-    <div class="categoria-titulo categoria-tropicales">🌴 Tropicales</div>
-
-    <div class="producto-item">
-        <img src="Contenido/Productos/tropical1.jpg" alt="Producto tropical 1">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+    <div class="tropicales">
+        <div class="categoria-separador">
+            <div class="categoria-icono">🌴</div>
+            <div class="categoria-linea"></div>
+            <div class="categoria-nombre">Tropicales</div>
+            <div class="categoria-linea"></div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/tropical2.jpg" alt="Producto tropical 2">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/tropical1.jpg" alt="Producto tropical 1">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/tropical3.jpg" alt="Producto tropical 3">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/tropical2.jpg" alt="Producto tropical 2">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="producto-item">
-        <img src="Contenido/Productos/tropical4.jpg" alt="Producto tropical 4">
-        <div class="producto-item-info">
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+        <div class="producto-item">
+            <img src="Contenido/Productos/tropical3.jpg" alt="Producto tropical 3">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
+        </div>
+
+        <div class="producto-item">
+            <img src="Contenido/Productos/tropical4.jpg" alt="Producto tropical 4">
+            <div class="producto-item-info">
+                <h3>Nombre del producto</h3>
+                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
+            </div>
         </div>
     </div>
 
