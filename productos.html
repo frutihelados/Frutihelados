@@ -96,7 +96,7 @@ nav a.activo {
     padding: 10px 30px 60px;
 }
 
-/* Separador de categoría estilo opción 3 */
+/* Separador de categoría */
 .categoria-separador {
     display: flex;
     align-items: center;
@@ -143,7 +143,7 @@ nav a.activo {
 .tropicales .categoria-linea { background: #1a9640; }
 .tropicales .categoria-nombre { color: #1a9640; }
 
-/* Item de producto en lista con borde izquierdo */
+/* Item de producto */
 .producto-item {
     background: white;
     border-radius: 12px;
@@ -160,7 +160,7 @@ nav a.activo {
     transform: translateY(-4px);
 }
 
-/* Borde izquierdo de color por categoría */
+/* Borde izquierdo por categoría */
 .citricos   .producto-item { border-left: 5px solid #e8780a; }
 .dulces     .producto-item { border-left: 5px solid #c0186e; }
 .cremosos   .producto-item { border-left: 5px solid #014c98; }
@@ -201,8 +201,8 @@ footer {
     color: white;
     text-align: center;
     padding: 30px;
-    width: 100%;                /* ← agrega esto */
-    box-sizing: border-box;     /* ← y esto */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 </style>
@@ -266,15 +266,8 @@ footer {
                 <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
             </div>
         </div>
-
-        <div class="producto-item">
-            <img src="Contenido/Productos/citrico3.jpg" alt="Producto cítrico 3">
-            <div class="producto-item-info">
-                <h3>Maracu-Mango</h3>
-                <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
-            </div>
-        </div>
     </div>
+    <!-- fin .citricos -->
 
     <!-- ───── DULCES ───── -->
     <div class="dulces">
@@ -296,7 +289,7 @@ footer {
         <div class="producto-item">
             <img src="Contenido/Productos/dulce2.jpg" alt="Producto dulce 2">
             <div class="producto-item-info">
-                <h3>Guanabana</h3>
+                <h3>Guanábana</h3>
                 <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
             </div>
         </div>
@@ -317,6 +310,7 @@ footer {
             </div>
         </div>
     </div>
+    <!-- fin .dulces -->
 
     <!-- ───── CREMOSOS ───── -->
     <div class="cremosos">
@@ -350,8 +344,8 @@ footer {
                 <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
             </div>
         </div>
-
     </div>
+    <!-- fin .cremosos -->
 
     <!-- ───── TROPICALES ───── -->
     <div class="tropicales">
@@ -385,10 +379,13 @@ footer {
                 <p>Descripción del producto. Cuéntale al cliente qué lo hace especial.</p>
             </div>
         </div>
+    </div>
+    <!-- fin .tropicales -->
 
 </div>
+<!-- fin .contenido -->
 
-<!-- Footer -->
+<!-- Footer FUERA del contenido -->
 <footer>
     <p>© 2026 Helado Artesanal con el mejor sabor</p>
     <p>servicioalcliente@frutihelados.com</p>
